@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+
+# local tooling (not part of the site)
+.claude/
+
+# source original art — kept locally, not deployed (site uses assets/images/)
+/portrait-original.png
+/portrait-reddish.png
+/portrait-glitched.png
+/scout.png
+/ally.png
+/wanderer.png

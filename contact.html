@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Bree Jones, Technical Program Manager</title>
+  <meta name="description" content="Get in touch with Bree Jones — Technical Program Manager. Send a message, or reach out on LinkedIn or X.">
+
+  <meta property="og:title" content="Bree Jones — Technical Program Manager, AI/ML">
+  <meta property="og:description" content="Get in touch with Bree Jones — Technical Program Manager. Send a message, or reach out on LinkedIn or X.">
+  <meta property="og:image" content="https://breejones.ai/assets/images/og-image.png">
+  <meta property="og:url" content="https://breejones.ai/contact.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bree Jones — Technical Program Manager, AI/ML">
+  <meta name="twitter:description" content="Get in touch with Bree Jones — Technical Program Manager. Send a message, or reach out on LinkedIn or X.">
+  <meta name="twitter:image" content="https://breejones.ai/assets/images/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-contact">
+
+  <nav class="site-nav">
+    <div class="nav-links">
+      <a class="nav-btn nav-btn--home"    href="index.html">Home</a>
+      <a class="nav-btn nav-btn--lore"    href="lore.html">Lore</a>
+      <a class="nav-btn nav-btn--contact" href="contact.html" aria-current="page">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle day/night mode" title="Toggle day/night mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="contact">
+    <div class="mac-window contact-window pixel-corners">
+      <div class="mac-window__bar">
+        <span class="mac-window__close" aria-hidden="true">&#10005;</span>
+        <span class="mac-window__title">contact.exe</span>
+      </div>
+      <div class="mac-window__body">
+        <p class="contact-intro">You made it this far. Let's actually talk. The form below goes straight to my inbox; LinkedIn and Twitter/X work too if that's easier.</p>
+
+        <!-- Web3Forms: add your access key in the hidden input below when ready. -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="1e168a88-a05b-4d01-a942-2e3ff2838166">
+          <input type="hidden" name="subject" value="New message from breejones.ai">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+          <label class="field">
+            <span class="field__label">Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button class="press-start contact-submit" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="social-link social-link--linkedin" href="https://www.linkedin.com/in/breannaijones/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m22,2v-1H2v1h-1v20h1v1h20v-1h1V2h-1Zm-9,10v8h-3v-11h3v1h1v-1h4v1h1v10h-3v-8h-3Zm-9-4v-3h3v3h-3Zm3,1v11h-3v-11h3Z"/></svg>
+    </a>
+    <a class="social-link social-link--x" href="https://x.com/itsbreejones" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m15.5,10v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h-3v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-2h-1v-1h-1v-1H1.5v1h1v1h1v1h1v2h1v1h1v2h1v1h1v2h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h3v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v1h1v1h1v2h1v1h1v1h7v-1h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h1Zm0,4v1h1v2h1v1h1v2h-3v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h3v1h1v2h1v1h1v2h1v1h1v1h1v2h1Z"/></svg>
+    </a>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38LQQ5RV21"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-38LQQ5RV21');
+  </script>
+</body>
+</html>

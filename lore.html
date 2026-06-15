@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lore — Bree Jones, Technical Program Manager</title>
+  <meta name="description" content="The full stat sheet behind the resume: who Bree Jones is, the career timeline, and deep dives on human data operations, LLM evals, and product ops & tooling.">
+
+  <meta property="og:title" content="Bree Jones — Technical Program Manager, AI/ML">
+  <meta property="og:description" content="Bree Jones, Technical Program Manager. 8 years across ML data ops, LLM evaluation, and product ops & tooling at Meta, Pinterest, and The Browser Company.">
+  <meta property="og:image" content="https://breejones.ai/assets/images/og-image.png">
+  <meta property="og:url" content="https://breejones.ai/lore.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bree Jones — Technical Program Manager, AI/ML">
+  <meta name="twitter:description" content="Bree Jones, Technical Program Manager. 8 years across ML data ops, LLM evaluation, and product ops & tooling at Meta, Pinterest, and The Browser Company.">
+  <meta name="twitter:image" content="https://breejones.ai/assets/images/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-lore">
+
+  <nav class="site-nav">
+    <div class="nav-links">
+      <a class="nav-btn nav-btn--home"    href="index.html">Home</a>
+      <a class="nav-btn nav-btn--lore"    href="lore.html" aria-current="page">Lore</a>
+      <a class="nav-btn nav-btn--contact" href="contact.html">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle day/night mode" title="Toggle day/night mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="lore">
+    <p class="lore-welcome" id="welcome-msg"></p>
+
+    <div class="lore-sections" id="lore-sections">
+
+      <!-- WHO I AM -->
+      <section class="section" id="who-i-am">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Who I Am</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <img class="who-portrait pixel-corners" src="assets/images/portrait-small-glitched.png" alt="Pixel-art portrait of Bree Jones">
+          <p>I went to school for graphic design because I loved art. Drawing, digital work, making things. That was always where I felt most like myself. I graduated from FAMU and almost immediately realized that making art for other people was not going to work for me. Handing creative work over to a client and watching it become something safe and generic was demoralizing in a way I wasn't prepared for. So I pivoted. I took a tech support role at Dropbox, and I didn't love the calls, but I did love the learning. I loved being a subject matter expert, knowing what was coming before anyone else did. That is a feeling that has never really left me.</p>
+          <p>The pattern across every role since has looked more or less the same. I come in early and I build. At Facebook I started as a QA contractor on a team of 12. I built the onboarding process, wrote documentation that outlasted my time there, and was functioning as an unofficial team lead by the time the team had grown to 50. That work led to a full-time project manager role on a different team (and, as it turned out, my entry into ML ops), which I held until I was recruited to Pinterest as the first hire on their data labeling and relevance program manager team. At The Browser Company I built their LLM evaluation framework from scratch and stood up a data pipeline to analyze user feedback at scale. Every time, the job is the same: come in when things are new, build the thing, set the standard, and leave it in better shape than I found it.</p>
+          <p>Also, my graphic design instinct never went away. It shows up in every presentation I build, every tool I design, every document I put my name on. I've noticed over time that people tend to bring things to me when they want them to look good, and for a long time I treated that as a side skill. But honestly, it's not. Caring about how something looks and caring about how it works come from the same place. The best things I've built have had both.</p>
+        </div>
+      </section>
+
+      <!-- CAREER TIMELINE -->
+      <section class="section" id="timeline">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Career Timeline</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <div class="timeline" id="timeline-rail">
+            <div class="timeline__seg seg--trusource" style="flex:18 0 108px"
+                 data-dates="Sep 2015 – Mar 2017"
+                 data-note="Contract agency — Dropbox, Nanit, Pearl, Nextbit">
+              <span class="seg__company">TruSource Labs</span>
+              <span class="seg__role">Solution Specialist</span>
+              <span class="seg__years"><span>2015</span><span>2017</span></span>
+            </div>
+            <div class="timeline__seg seg--meta-contract" style="flex:18 0 108px"
+                 data-dates="Mar 2017 – Sep 2018"
+                 data-note="Contract (via PRO Unlimited)">
+              <span class="seg__company">Meta</span>
+              <span class="seg__role">Triage Specialist</span>
+              <span class="seg__years"><span>2017</span><span>2018</span></span>
+            </div>
+            <div class="timeline__seg seg--meta-ft" style="flex:30 0 180px"
+                 data-dates="Oct 2018 – Apr 2021"
+                 data-note="Full-time">
+              <span class="seg__company">Meta</span>
+              <span class="seg__role">Project Manager, Product Data Ops</span>
+              <span class="seg__years"><span>2018</span><span>2021</span></span>
+            </div>
+            <div class="timeline__seg seg--pinterest" style="flex:49 0 294px"
+                 data-dates="Apr 2021 – May 2025"
+                 data-note="Full-time">
+              <span class="seg__company">Pinterest</span>
+              <span class="seg__role">Data Labeling &amp; Relevance Program Manager</span>
+              <span class="seg__years"><span>2021</span><span>2025</span></span>
+            </div>
+            <div class="timeline__seg seg--browser" style="flex:9 0 130px"
+                 data-dates="May 2025 – Feb 2026"
+                 data-note="Full-time">
+              <span class="seg__company">The Browser Company</span>
+              <span class="seg__role">Product Operations, LLM Evals</span>
+              <span class="seg__years"><span>2025</span><span>2026</span></span>
+            </div>
+          </div>
+          <div class="timeline__tooltip" id="timeline-tooltip" hidden></div>
+          <div class="tl-bar" id="tl-bar" hidden><div class="tl-bar__thumb" id="tl-thumb"></div></div>
+          <p class="timeline__hint" id="timeline-hint" hidden>Scroll for more&nbsp;→</p>
+        </div>
+      </section>
+
+      <!-- TAB CONTAINER -->
+      <section class="section" id="tab-container">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Professional Work</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <div class="tabs" role="tablist">
+            <button class="tab tab--hdo is-active" role="tab" data-tab="hdo">Human Data Operations</button>
+            <button class="tab tab--evals" role="tab" data-tab="evals">LLM Evals</button>
+            <button class="tab tab--prodops" role="tab" data-tab="prodops">Product Ops &amp; Tooling</button>
+          </div>
+
+          <div class="tab-panel is-active" id="panel-hdo" role="tabpanel">
+            <p class="tab-opener">The job is consistently underestimated until something breaks. I've spent eight years making sure it doesn't, building annotation programs from scratch at Meta and Pinterest, running eight-figure vendor portfolios, and delivering 20 million-plus annotations a year across search, ads, and trust and safety.</p>
+            <p><strong>Vendor portfolio and operations.</strong> I've managed vendor portfolios north of $16M, run full RFP processes, and coordinated workforces of 300-plus across dozens of locales. I know how to build accountability into vendor relationships before the problems show up.</p>
+            <p><strong>QA and quality infrastructure.</strong> I build annotation QA infrastructure from the ground up. At Pinterest, IRR monitoring, calibration workflows, and QA sampling protocols I designed improved annotation quality 20 percent across all programs.</p>
+            <p><strong>Direct management and mentorship.</strong> I've managed contractor teams of up to 12 at Meta and 3 at Pinterest, and as the founding PM at Pinterest I trained every program manager who joined the team after me. Building institutional knowledge that doesn't leave when you do is something I take seriously.</p>
+            <p><strong>Annotation infrastructure and tooling.</strong> I've owned annotation platform selection, implementation, and technical coordination with engineering, including running full RFPs and managing complex integrations. At Pinterest I completed a dual-platform transition in six months against a typical one-year timeline.</p>
+            <p><strong>Safety and responsible AI programs.</strong> I've supported ML safety classifier programs at Meta and built trust and safety annotation infrastructure at Pinterest, including EAP vendor support for raters doing sensitive content work. When Pinterest needed to mobilize quickly on a content issue, the program infrastructure was already in place.</p>
+            <p><strong>Cross-functional influence.</strong> I translate data quality into business risk to earn engineering and leadership buy-in. At Pinterest the QA program I built started as self-funded informal audits and ended as a formal investment with dedicated headcount.</p>
+            <p><strong>ML lifecycle.</strong> I work with annotation as part of the model performance feedback loop, not a standalone function. That means surfacing re-training data needs, mining for annotation gaps tied to model regressions, and building the connection between what models struggle with and what goes back into labeling pipelines.</p>
+            <p class="tab-tools"><strong>Tools:</strong> Appen / Figure Eight, Labelbox, Google Sheets + Apps Script, BigQuery, SQL, Tableau, Retool</p>
+          </div>
+
+          <div class="tab-panel" id="panel-evals" role="tabpanel" hidden>
+            <p class="tab-opener">LLM evaluation requires solving a problem most teams skip: defining what quality means before trying to measure it. I built The Browser Company's eval program from zero as the sole person responsible for both the framework design and the measurement infrastructure.</p>
+            <p><strong>Eval framework design.</strong> I built The Browser Company's LLM evaluation program from the ground up, beginning with a full audit of AI features, existing eval coverage, and what behavioral standards had actually been defined. Nothing gets measured rigorously without first establishing what you're measuring against.</p>
+            <p><strong>Scoring architecture.</strong> I designed evaluation scoring using the practitioner-standard approach: code-based assertions for deterministic failures like tag presence, format compliance, and length rules, and LLM-as-judge for subjective quality dimensions like coherence, tone, and reasoning. Getting that distinction right is the difference between a reliable signal and a vibe check.</p>
+            <p><strong>Judge calibration.</strong> I validated LLM judge outputs against human assessment before trusting any judge at scale, a step many teams skip and the reason so many eval systems produce misleading signal. At BCNY I was often the human rater in that validation loop.</p>
+            <p><strong>Representative dataset construction.</strong> I build evaluation datasets from actual user query distributions, not assumed or hypothetical categories. At BCNY I analyzed 10,000-plus real queries to build a usage taxonomy that grounded our synthetic test sets in how users actually interacted with the product.</p>
+            <p><strong>Production monitoring and regression management.</strong> I set up automated daily eval monitoring at BCNY, built a severity classification system that assigned engineering ownership to regressions, and established a practice of testing eval suites against new model versions before release. Visibility without accountability is just reporting; I built both.</p>
+            <p><strong>Making evals actionable.</strong> Translating eval findings into engineering priorities and product decisions is a PM function that belongs in the eval loop, not after it. At BCNY I owned a weekly insights cadence to product leadership and the CTO that became the team's primary signal for quality prioritization.</p>
+            <p><strong>Prompt management.</strong> I reviewed, edited, and submitted PRs for system prompt changes as part of the eval cycle, using regression signals to propose targeted fixes to model behavior. Prompt iteration and eval were the same loop, not separate workstreams.</p>
+            <p><strong>Eval coverage analysis.</strong> I used user feedback signals to identify where existing evals were falling short or failing to surface real failure modes, closing the loop between what users actually experienced and what the evaluation suite was measuring. Real usage patterns surfaced blind spots that assumed failure modes never would have.</p>
+            <p class="tab-tools"><strong>Tools:</strong> Python, LLM APIs (Anthropic, OpenAI, Google), Braintrust, Retool, BigQuery, Cursor, SQL, GitHub</p>
+          </div>
+
+          <div class="tab-panel" id="panel-prodops" role="tabpanel" hidden>
+            <p class="tab-opener">The through-line across every role I've held: whenever I hit a process that was manual, error-prone, or invisible to the team, I'd find a way to fix it, usually by building something. That instinct has produced annotation UIs, LLM pipelines, self-serve reporting tools, Tableau dashboards, and a training portal nobody asked me to build. Product operations, for me, has always been about removing the friction other people don't have time to address.</p>
+            <p><strong>LLM pipeline design and AI automation.</strong> At BCNY I designed and built a chained LLM pipeline that connected explicit user feedback from S3 with BigQuery signals nobody had combined before, running multi-step summarization and categorization on an hourly cadence. The pipeline created systematic visibility into quality patterns and failure modes that product and engineering had no previous access to, including a routing error that was ultimately reduced by 80 percent.</p>
+            <p><strong>Self-serve internal tooling.</strong> I build tools that teams can use without coming to me. At Pinterest I replaced a CURL-based CLI for annotation job submission with a Retool GUI featuring drag-and-drop upload, input validation, and one-click submission, bringing ramp-up time for new PMs to under 15 minutes and launch errors to zero.</p>
+            <p><strong>Annotation UI development.</strong> I designed and built 45-plus annotation UIs in HTML, CSS, and JavaScript covering every interaction type our programs ran: image bounding boxes, multi-select, free text, and chat interfaces. When we migrated vendors, I baked a REST API requirement into the RFP that enabled auto-generation of per-row HTML from shared templates, cutting job prep time from hours to minutes.</p>
+            <p><strong>Reporting and data infrastructure.</strong> I've owned reporting end to end, from Tableau dashboards tracking rater alignment for 360-person workforces at Meta to the LLM-analyzed weekly insights cadence I built at BCNY that became a standing reference for engineering prioritization. Clean, decision-ready data doesn't surface itself.</p>
+            <p><strong>PM enablement and L&amp;D.</strong> At Pinterest I built a dual-purpose training portal when PMs transferred in from another team with no data labeling background and nobody had the bandwidth to onboard them. Nobody asked me to build it; the alternative was a team that couldn't function without me as the knowledge bottleneck.</p>
+            <p><strong>Cross-functional coordination.</strong> Operational infrastructure rarely has a natural champion, which means making the case is part of the job. I've navigated vendor budget negotiations, legal and compliance review for trust and safety tooling, and engineering roadmap conversations across Meta, Pinterest, and BCNY; at BCNY the stakes were highest because I was the only person in the function and every cross-functional conversation with leadership, product, and the model behavior engineering team landed directly on me.</p>
+            <p class="tab-tools"><strong>Tools:</strong> Python, HTML/CSS/JS, Retool, Tableau, BigQuery, SQL, Google Sheets + Apps Script, Intellum, Articulate 360, Rise, Notion, Coda</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTSIDE THE JOB -->
+      <section class="section" id="outside-job">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Outside the Job</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <p>When I'm off the clock, I'm usually playing something or making something. The short version:</p>
+          <div class="interests">
+            <div class="interest-group interest-group--red">
+              <span class="interest-label">Playing</span>
+              <div class="chips">
+                <span class="chip">Stardew Valley</span>
+                <span class="chip">Coral Island</span>
+                <span class="chip">Hades 1 &amp; 2</span>
+                <span class="chip">God of War</span>
+                <span class="chip">Horizon Forbidden West</span>
+              </div>
+            </div>
+            <div class="interest-group interest-group--purple">
+              <span class="interest-label">Making</span>
+              <div class="chips">
+                <span class="chip">Digital art</span>
+                <span class="chip">Crochet</span>
+                <span class="chip">Pottery</span>
+                <span class="chip">Painting</span>
+                <span class="chip">FDM printing</span>
+                <span class="chip">Resin printing</span>
+                <span class="chip">3D modeling</span>
+              </div>
+            </div>
+            <div class="interest-group interest-group--orange">
+              <span class="interest-label">Eating &amp; drinking</span>
+              <div class="chips">
+                <span class="chip">Seafood</span>
+                <span class="chip">Japanese</span>
+                <span class="chip">Vietnamese</span>
+                <span class="chip">Taiwanese</span>
+                <span class="chip">Low-lit cocktail bars</span>
+              </div>
+            </div>
+            <div class="interest-group interest-group--blue">
+              <span class="interest-label">Reading &amp; watching</span>
+              <div class="chips">
+                <span class="chip">Brandon Sanderson books</span>
+                <span class="chip">One Piece</span>
+                <span class="chip">Witch Hat Atelier</span>
+                <span class="chip">Daemons of the Shadow Realm</span>
+                <span class="chip">Severance</span>
+                <span class="chip">Monk</span>
+              </div>
+            </div>
+            <div class="interest-group interest-group--green">
+              <span class="interest-label">Travel wishlist</span>
+              <div class="chips">
+                <span class="chip">Portugal</span>
+                <span class="chip">Spain</span>
+                <span class="chip">Japan</span>
+              </div>
+            </div>
+          </div>
+          <p class="interest-outro">Florida-raised, Oakland-based, and more of an extrovert than people expect. If I'm invited somewhere, I'm probably going.</p>
+        </div>
+      </section>
+
+      <!-- TOOLS & LANGUAGES -->
+      <section class="section" id="tools">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Tools &amp; Languages</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <div class="tools-grid" id="tools-grid"></div>
+        </div>
+      </section>
+
+      <!-- CAREER CURIOSITIES -->
+      <section class="section" id="career-curiosities">
+        <button class="section__header" type="button" aria-expanded="true">
+          <span class="section__title">Career Curiosities</span>
+          <span class="section__arrow" aria-hidden="true">▲</span>
+        </button>
+        <div class="section__body">
+          <p>Outside the program and operations tracks I've spent years building, these are three areas I could see myself pivoting to:</p>
+          <table class="lore-table">
+            <thead>
+              <tr><th>Area</th><th>Why I'm drawn to it</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Product Management</td>
+                <td>The closest to where I already am — cross-functional coordination, product sense, tooling, launch readiness. I've lived right next to it for years and can see myself making the move.</td>
+              </tr>
+              <tr>
+                <td>Design Program Management</td>
+                <td>The same instinct behind a lot of this site: after years deep in technical work, I want to be closer to the creative side again. Not as a designer — just near it.</td>
+              </tr>
+              <tr>
+                <td>Product Marketing</td>
+                <td>Simple, really: I've loved every product I've worked on, and helping promote something I believe in sounds like work I'd be good at and genuinely enjoy.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>If you're recruiting for these roles and open to discussing what that would look like at your company, please reach out.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT CTA (Wanderer only) -->
+      <section class="section section--cta" id="contact-cta" hidden>
+        <div class="section__body cta-body">
+          <p class="cta-title">Let's connect →</p>
+          <p>Find me on social, or head to the <a href="contact.html">contact page</a> for the form.</p>
+          <div class="cta-socials">
+            <a class="social-link social-link--linkedin" href="https://www.linkedin.com/in/breannaijones/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m22,2v-1H2v1h-1v20h1v1h20v-1h1V2h-1Zm-9,10v8h-3v-11h3v1h1v-1h4v1h1v10h-3v-8h-3Zm-9-4v-3h3v3h-3Zm3,1v11h-3v-11h3Z"/></svg></a>
+            <a class="social-link social-link--x" href="https://x.com/itsbreejones" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m15.5,10v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h-3v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-2h-1v-1h-1v-1H1.5v1h1v1h1v1h1v2h1v1h1v2h1v1h1v2h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h3v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v1h1v1h1v2h1v1h1v1h7v-1h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h1Zm0,4v1h1v2h1v1h1v2h-3v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h3v1h1v2h1v1h1v2h1v1h1v1h1v2h1Z"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIDE QUESTS -->
+      <section class="section section--sidequests collapsed" id="side-quests">
+        <button class="section__header" type="button" aria-expanded="false">
+          <span class="section__title">Side Quests</span>
+          <span class="section__arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="section__body side-quests__body" id="side-quests-body">
+          <!-- nested sections moved here per persona by lore.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="social-link social-link--linkedin" href="https://www.linkedin.com/in/breannaijones/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m22,2v-1H2v1h-1v20h1v1h20v-1h1V2h-1Zm-9,10v8h-3v-11h3v1h1v-1h4v1h1v10h-3v-8h-3Zm-9-4v-3h3v3h-3Zm3,1v11h-3v-11h3Z"/></svg>
+    </a>
+    <a class="social-link social-link--x" href="https://x.com/itsbreejones" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m15.5,10v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h-3v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-2h-1v-1h-1v-1H1.5v1h1v1h1v1h1v2h1v1h1v2h1v1h1v2h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h3v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v1h1v1h1v2h1v1h1v1h7v-1h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h1Zm0,4v1h1v2h1v1h1v2h-3v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h3v1h1v2h1v1h1v2h1v1h1v1h1v2h1Z"/></svg>
+    </a>
+  </footer>
+
+  <!-- Persona reveal popup (overlays page while sections shuffle in) -->
+  <div class="persona-popup" id="persona-popup" role="status" aria-live="polite">
+    <div class="mac-window persona-window pixel-corners">
+      <div class="mac-window__bar">
+        <span class="mac-window__close" aria-hidden="true">&#10005;</span>
+        <span class="mac-window__title">your-order.exe</span>
+      </div>
+      <div class="mac-window__body">
+        <h2 class="persona-popup__title" id="popup-title"></h2>
+        <p class="persona-popup__msg" id="popup-msg"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/lore.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38LQQ5RV21"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-38LQQ5RV21');
+  </script>
+</body>
+</html>
