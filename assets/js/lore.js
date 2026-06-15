@@ -186,6 +186,15 @@
     seg.addEventListener('mouseleave', function () { tip.hidden = true; });
   });
 
+  /* ---- "explore another area" -> scroll back up to the switcher ---- */
+  var backToAreas = byId('back-to-areas');
+  if (backToAreas) {
+    backToAreas.addEventListener('click', function () {
+      var anchor = document.querySelector('.work-prompt') || document.querySelector('.tabs');
+      if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
   /* ---- timeline: custom always-visible scrollbar + scroll hint ---- */
   (function () {
     var rail = byId('timeline-rail');
