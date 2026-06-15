@@ -763,6 +763,17 @@ h1, h2, h3 { font-family: var(--font-ui); font-weight: 400; line-height: 1.25; }
 
 .contact-socials { display: flex; gap: 16px; justify-content: center; margin-top: 22px; }
 
+/* form result states */
+.contact-success { text-align: center; padding: 18px 0; }
+.contact-success__title { font-family: var(--font-ui); font-size: 15px; color: var(--green); margin: 0 0 10px; }
+.contact-success__body { font-family: var(--font-body); font-size: 14px; margin: 0; }
+.contact-error {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--red);
+  margin: 4px 0 0;
+}
+
 /* --------------------------------------------------------------- responsive */
 @media (max-width: 640px) {
   .timeline { flex-direction: column; overflow-x: visible; }
