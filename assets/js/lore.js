@@ -180,8 +180,15 @@
       tip.hidden = false;
     });
     seg.addEventListener('mousemove', function (e) {
-      tip.style.left = e.clientX + 'px';
-      tip.style.top = (e.clientY + 18) + 'px';
+      var pad = 8;
+      var tw = tip.offsetWidth, th = tip.offsetHeight;
+      var x = e.clientX, y = e.clientY + 18;
+      if (x + tw > window.innerWidth - pad) x = window.innerWidth - tw - pad;  // keep on-screen right
+      if (x < pad) x = pad;                                                     // and left
+      if (y + th > window.innerHeight - pad) y = e.clientY - th - 12;           // flip above near bottom
+      if (y < pad) y = pad;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
     });
     seg.addEventListener('mouseleave', function () { tip.hidden = true; });
   });
@@ -195,57 +202,6 @@
     });
   }
 
-  /* ---- timeline: custom always-visible scrollbar + scroll hint ---- */
-  (function () {
-    var rail = byId('timeline-rail');
-    var bar = byId('tl-bar');
-    var thumb = byId('tl-thumb');
-    var hint = byId('timeline-hint');
-    if (!rail || !bar || !thumb) return;
-
-    function maxScroll() { return rail.scrollWidth - rail.clientWidth; }
-    function trackW() { return bar.clientWidth - 4; }   // 2px inset each side
-
-    function sync() {
-      var ms = maxScroll();
-      if (ms <= 2) { bar.hidden = true; if (hint) hint.hidden = true; return; }
-      bar.hidden = false;
-      var tW = Math.max(36, (rail.clientWidth / rail.scrollWidth) * trackW());
-      thumb.style.width = tW + 'px';
-      var left = (rail.scrollLeft / ms) * (trackW() - tW);
-      thumb.style.left = (2 + left) + 'px';
-      if (hint) hint.hidden = rail.scrollLeft >= ms - 4;
-    }
-
-    function scrollToThumbLeft(px) {
-      var tW = thumb.offsetWidth;
-      var maxThumb = trackW() - tW;
-      var clamped = Math.min(maxThumb, Math.max(0, px));
-      rail.scrollLeft = maxThumb > 0 ? (clamped / maxThumb) * maxScroll() : 0;
-    }
-
-    rail.addEventListener('scroll', sync, { passive: true });
-    window.addEventListener('resize', sync);
-
-    // drag the thumb
-    var dragging = false, startX = 0, startLeft = 0;
-    thumb.addEventListener('mousedown', function (e) {
-      dragging = true; startX = e.clientX; startLeft = thumb.offsetLeft - 2; e.preventDefault();
-    });
-    window.addEventListener('mousemove', function (e) {
-      if (!dragging) return;
-      scrollToThumbLeft(startLeft + (e.clientX - startX));
-    });
-    window.addEventListener('mouseup', function () { dragging = false; });
-
-    // click the track to jump
-    bar.addEventListener('click', function (e) {
-      if (e.target === thumb) return;
-      scrollToThumbLeft(e.clientX - bar.getBoundingClientRect().left - 2 - thumb.offsetWidth / 2);
-    });
-
-    sync();
-  })();
 
   /* ---- tools grid ---- */
   var tools = [
